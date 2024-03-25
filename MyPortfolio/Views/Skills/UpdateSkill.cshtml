@@ -1,0 +1,29 @@
+﻿@model MyPortfolio.Models.Skills
+@{
+    ViewBag.Title = "UpdateSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yetenek Güncelleme Sayfası</h2>
+<br />
+
+<form method="post">
+    <input type="hidden" name="SkillID" value="@Model.SkillID" class="form-control" />
+    @Html.Label("Yetenek Adı")
+    <input type="text" name="Name" value="@Model.Name" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Name, "", new { @class = "text-danger" })
+    <br />
+    @Html.Label("Yüzde (%)")
+    <input type="text" name="Amount" value="@Model.Amount" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Amount, "", new { @class = "text-danger" })
+    <br />
+    <input type="submit" class="btn btn-outline-success" value="Ekle" />
+</form>
+
+
+
+
+
+
+

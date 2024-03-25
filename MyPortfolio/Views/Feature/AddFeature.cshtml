@@ -1,0 +1,44 @@
+﻿@model MyPortfolio.Models.Features
+@{
+    ViewBag.Title = "AddFeature";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<br />
+
+<h2>Öne Çıkan ekleme sayfası</h2>
+<br />
+
+<script>
+  
+        function TestOnTextChange2(data) {
+            
+            
+            if (data == "") {
+                $(".spnNameSurname").fadeIn();
+            }
+            else {
+                $(".spnNameSurname").();
+            }
+        }
+    
+</script>
+
+
+<form method="post" enctype="multipart/form-data">
+    <label>Görsel</label>
+    <input type="file" name="ImageUrl" class="form-control" />
+    @Html.ValidationMessageFor(x => x.ImageUrl, "", new { @class = "text-danger" })
+    <br />
+    <label>Ad Soyad</label>
+    <input type="text" name="NameSurname" class="form-control" id="textInput" onkeyup="TestOnTextChange2(value)" />
+    <span class="text-danger spnNameSurname" style="display:none">Bu alanı Doldurunuz</span>
+    @Html.ValidationMessageFor(x => x.NameSurname, "", new { @class = "text-danger" })
+    <br />
+    <label>Başlık</label>
+    <input type="text" name="Title" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Title, "", new { @class = "text-danger" })
+    <br />
+    <input type="submit" class="btn btn-outline-success" value="Ekle" />
+</form>
+

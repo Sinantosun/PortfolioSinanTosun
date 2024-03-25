@@ -1,0 +1,19 @@
+﻿@model MyPortfolio.Models.Categories
+@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni kategori ekleme sayfası</h2>
+
+<br />
+
+<form method="post">
+    <label>Kategori Adı</label>
+    <input type="text" name="Name" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Name, "", new { @class = "text-danger"})
+    <br />
+    <input type="submit" class="btn btn-outline-danger" value="Kaydet" />
+
+</form>

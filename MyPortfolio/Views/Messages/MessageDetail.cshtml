@@ -1,0 +1,30 @@
+﻿@model MyPortfolio.Models.Messages
+@{
+    ViewBag.Title = "MessageDetail";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+
+<div class="container">
+    <div class="card my-10">
+        <div class="card-body">
+            <h1 class="h3 mb-2">Mesaj Detayı</h1>
+            <br />
+                <h5 class="text-teal-700">Başlık : @Model.Subject.</h5>
+                <hr>
+                <div class="space-y-3">
+                    <p class="text-gray-700">@Model.MessageContent</p>
+                </div>
+                <hr>
+                <div class="space-y-3">
+                    <p class="text-gray-700 text-capitalize">Gönderen: @Model.NameSurname</p>
+                    <p class="text-gray-700">Email :<a href="mailto:@Model.Email"> @Model.Email</a> </p>
+                    <p class="text-gray-700">Tarih: @(((DateTime)Model.MessageDate).ToString("f"))</p>
+                </div>
+            
+
+        </div>
+    </div>
+</div>
+
+

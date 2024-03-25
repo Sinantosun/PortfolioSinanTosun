@@ -1,0 +1,31 @@
+﻿@model MyPortfolio.Models.Services
+@{
+    ViewBag.Title = "AddService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<br />
+<h2>Hizmet Ekleme Sayfası</h2>
+<br />
+
+<form method="post">
+    @Html.Label("İkon")
+    <input type="text" name="Icon" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Icon, "", new { @class = "text-danger" })
+    <br />
+    @Html.Label("Başlık")
+    <input type="text" name="Title" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Title, "", new { @class = "text-danger" })
+    <br />
+    @Html.Label("Açıklama")
+    <input type="text" name="Description" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Description, "", new { @class = "text-danger" })
+    <br />
+    <input type="submit" class="btn btn-outline-success" />
+</form>
+
+
+
+

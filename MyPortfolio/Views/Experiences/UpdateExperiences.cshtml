@@ -1,0 +1,40 @@
+﻿@using MyPortfolio.Models
+@model Experiences
+@{
+    ViewBag.Title = "AddExperiences";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Deneyim güncelleme sayfası</h2>
+<br />
+<form method="post">
+    <label>Şirket Adı</label>
+    <input type="hidden" name="ExperinceID" value="@Model.ExperinceID" class="form-control" />
+    <input type="text" name="CompanyName" value="@Model.CompanyName" class="form-control" />
+    @Html.ValidationMessageFor(x => x.CompanyName, "", new { @class = "text-danger" })
+    <br />
+    <label>Başlık</label>
+    <input type="text" name="Title" value="@Model.Title" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Title, "", new { @class = "text-danger" })
+    <br />
+    <label>Açıklama</label>
+    <input type="text" name="Description" value="@Model.Description" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Description, "", new { @class = "text-danger" })
+    <br />
+    <label>Lokasyon Bilgisi</label>
+    <input type="text" name="Location" value="@Model.Location" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Location, "", new { @class = "text-danger" })
+    <br />
+    <label>Başlama Yılı</label>
+    <input type="text" name="StartYear" value="@Model.StartYear" class="form-control" />
+    @Html.ValidationMessageFor(x => x.StartYear, "", new { @class = "text-danger" })
+    <br />
+    <label>Bitiş Yılı</label>
+    <input type="text" name="EndYear" value="@Model.EndYear" class="form-control" />
+    @Html.ValidationMessageFor(x => x.EndYear, "", new { @class = "text-danger" })
+    <small>Bu alanı boş bırakabilirsiniz.</small>
+    <br />
+    <input type="submit" class="btn btn-outline-success" value="Güncelle" />
+</form>
+

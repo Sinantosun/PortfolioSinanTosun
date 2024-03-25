@@ -1,0 +1,29 @@
+﻿@using MyPortfolio.Models
+@model Contacts
+@{
+    ViewBag.Title = "AddContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>İletişim ekleme sayfası</h2>
+<br />
+<form method="post">
+    <label>Ad Soyad</label>
+    <input type="text" name="NameSurname" class="form-control" />
+    @Html.ValidationMessageFor(x => x.NameSurname, "", new { @class = "text-danger" })
+    <br />
+    <label>Adress</label>
+    <input type="text" name="Address" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Address, "", new { @class = "text-danger" })
+    <br />
+    <label>Telefon No</label>
+    <input type="text" name="Phone" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Phone, "", new { @class = "text-danger" })
+    <br />
+    <label>Email</label>
+    <input type="email" name="Email" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Email, "", new { @class = "text-danger" })
+    <br />
+    <input type="submit" class="btn btn-outline-success" value="Ekle" />
+</form>

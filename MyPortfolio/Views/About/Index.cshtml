@@ -1,0 +1,36 @@
+﻿@using MyPortfolio.Models
+@model List<Abouts>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Hakkımda Sayfası</h2>
+<br />
+<a href="/About/AddAbout" class="btn btn-outline-dark">Yeni Hakkımda Yazısı Ekle</a>
+<br /><br />
+<table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <th>Görsel</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.AboutID</td>
+            <td><img src="@item.ImageURL" class="img-thumbnail" style="width:100px; height:100px; object-fit:cover" /></td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td><a href="/About/DeleteAbout/@item.AboutID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/About/UpdateAbout/@item.AboutID" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+<br />

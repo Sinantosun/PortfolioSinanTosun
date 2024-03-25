@@ -1,0 +1,33 @@
+﻿@model MyPortfolio.Models.Services
+@{
+    ViewBag.Title = "UpdateService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+<h2>Hizmet Güncelleme Sayfası</h2>
+<br />
+
+<form method="post">
+    <input type="hidden" name="ServicesID" value="@Model.ServicesID"  class="form-control" />
+    @Html.Label("İkon")
+    <input type="text" name="Icon" value="@Model.Icon" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Icon, "", new { @class = "text-danger" })
+    <br />
+    @Html.Label("Başlık")
+    <input type="text" name="Title" value="@Model.Title" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Title, "", new { @class = "text-danger" })
+    <br />
+    @Html.Label("Açıklama")
+    <input type="text" name="Description" value="@Model.Description" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Description, "", new { @class = "text-danger" })
+    <br />
+    <input type="submit" class="btn btn-outline-success" />
+</form>
+
+
+
+
+
+

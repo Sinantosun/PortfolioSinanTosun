@@ -1,0 +1,35 @@
+﻿@model MyPortfolio.Models.Projects
+
+@{
+    ViewBag.Title = "UpdateProject";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni proje ekleme sayfası</h2>
+<br />
+
+<form method="post" enctype="multipart/form-data">
+    <label>Proje Adı</label>
+    <input type="hidden" name="ProjectID" value="@Model.ProjectID" class="form-control" />
+    <input type="text" name="Name" value="@Model.Name" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Name, "", new { @class = "text-danger" })
+    <br />
+    <label>Görsel</label>
+    <input type="file" name="Image" value="@Model.Image" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Image, "", new { @class = "text-danger" })
+    <br />
+    <label>Github</label>
+    <input type="text" name="Github" value="@Model.Github" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Github, "", new { @class = "text-danger" })
+
+    <br />
+    <label>Kategori</label>
+    @Html.DropDownListFor(x => x.Category, (List<SelectListItem>)ViewBag.CategoryList, "Seçiniz", new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Category, "", new { @class = "text-danger" })
+    <br />
+    <input type="submit" class="btn btn-outline-danger" value="Güncelle" />
+
+</form>
+
+
