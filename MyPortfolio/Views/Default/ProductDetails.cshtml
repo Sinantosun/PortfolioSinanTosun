@@ -1,0 +1,46 @@
+﻿@model MyPortfolio.Models.Projects
+@{
+    ViewBag.Title = "ProductDetails";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+<div class="portfolio">
+
+    <div class="container">
+        <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+            <br /><br />
+            <p>Projelerim</p>
+            <h2>Proje Detayı</h2>
+        </div>
+        <div class="row portfolio-container">
+         
+                <div class="col-md-12 portfolio-item wow fadeInUp" data-wow-delay="0.0s">
+                    <div class="portfolio-wrap">
+                        <div class="portfolio-img">
+                            <img src="@Model.Image" alt="Image">
+                            <br />
+                        </div>
+                   
+                        <div class="portfolio-text">
+                            <p><h3 style="text-align:right">Proje Adı : @Model.Name </h3></p>
+                            <p><h3>Proje Kategorisi : @Model.Categories.Name </h3></p>
+                        </div>
+                        <br />
+                        <div class="portfolio-text text-center">
+                            <h3>Proje Açıklaması </h3>
+                        </div>
+                        <div>
+                            @Html.Raw(Model.Description)
+                        </div>
+                        <br />
+                        <br />
+                        <div class="portfolio-text text-center">
+                            <h3>Proje Github Linki : <a href="@Model.Github" target="_blank">@Model.Github </a> </h3>
+                        </div>
+                    </div>
+                </div>
+            
+
+        </div>
+    </div>
+</div>

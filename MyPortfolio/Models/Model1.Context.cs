@@ -36,7 +36,7 @@ namespace MyPortfolio.Models
         public virtual DbSet<Skills> Skills { get; set; }
         public virtual DbSet<SocialMedias> SocialMedias { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<Teams> Teams { get; set; }
         public virtual DbSet<Testimonials> Testimonials { get; set; }
+        public virtual DbSet<Teams> Teams { get; set; }
     }
 }

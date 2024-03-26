@@ -9,11 +9,10 @@ namespace MyPortfolio.ValidationRules.TeamsValidatiors
     {
         public TeamsValidator()
         {
-            RuleFor(x => x.ImageURL).NotEmpty().WithMessage("Bu alanı doldurun.");
             RuleFor(x => x.NameSurname).NotEmpty().WithMessage("Bu alanı doldurun.");
             RuleFor(x => x.Title).NotEmpty().WithMessage("Bu alanı doldurun.");
-            RuleFor(x => x.Açıklama).NotEmpty().WithMessage("Bu alanı doldurun.");
-
+            RuleFor(x => x.Description).NotEmpty().WithMessage("Bu alanı doldurun.");
+            RuleFor(x => x.Description).MaximumLength(150).WithMessage("Bu alanı maxiumum 150 karakter içermelidir.");
         }
     }
 }

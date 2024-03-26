@@ -1,0 +1,52 @@
+﻿@model MyPortfolio.Models.Teams
+@{
+    ViewBag.Title = "UpdateTeams";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<br />
+<h2>Ekip Arkadaşı Güncelleme Sayfası</h2>
+<br />
+
+<form method="post" enctype="multipart/form-data">
+    <input type="hidden" name="TeamID" value="@Model.TeamID" />
+    @Html.Label("Görsel")
+    <input type="file" name="ImageURL" value="@Model.ImageURL" class="form-control" />
+    @Html.ValidationMessageFor(x => x.ImageURL, "", new { @class = "text-danger" })
+    <br />
+    @Html.Label("Ad Soyad")
+    <input type="text" name="NameSurname" value="@Model.NameSurname" class="form-control" />
+    @Html.ValidationMessageFor(x => x.NameSurname, "", new { @class = "text-danger" })
+    <br />
+    @Html.Label("Başlık")
+    <input type="text" name="Title" value="@Model.Title" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Title, "", new { @class = "text-danger" })
+    <br />
+    @Html.Label("Kısa açıklama")
+    <input type="text" name="Description" value="@Model.Description" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Description, "", new { @class = "text-danger" })
+    <br />
+    @Html.Label("InstagramURL")
+    <input type="text" name="InstagramURL" value="@Model.InstagramURL" class="form-control" />
+    @Html.ValidationMessageFor(x => x.InstagramURL, "", new { @class = "text-danger" })
+    <br />
+    @Html.Label("GithubURL")
+    <input type="text" name="GithubURL" value="@Model.GithubURL" class="form-control" />
+    @Html.ValidationMessageFor(x => x.GithubURL, "", new { @class = "text-danger" })
+    <br />
+    @Html.Label("LinkedinURL")
+    <input type="text" name="LinkedinURL" value="@Model.LinkedinURL" class="form-control" />
+    @Html.ValidationMessageFor(x => x.LinkedinURL, "", new { @class = "text-danger" })
+    <br />
+    <input type="submit" class="btn btn-outline-success" />
+</form>
+
+
+
+
+
+
+
+

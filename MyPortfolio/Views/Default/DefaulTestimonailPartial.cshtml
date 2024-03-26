@@ -1,0 +1,27 @@
+﻿@model List<MyPortfolio.Models.Testimonials>
+<div class="testimonial wow fadeInUp" data-wow-delay="0.1s" id="review">
+    <div class="container">
+        <div class="testimonial-icon">
+            <i class="fa fa-quote-left"></i>
+        </div>
+        <div class="owl-carousel testimonials-carousel">
+            @foreach (var item in Model)
+            {
+                <div class="testimonial-item">
+                    <div class="testimonial-img">
+                        <img src="@item.ImageURL" alt="Image">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>
+                            @item.Comment
+                        </p>
+                        <h3>@item.NameSurname</h3>
+                        <h4>@item.Title</h4>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+</div>

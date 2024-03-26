@@ -1,0 +1,48 @@
+﻿@using MyPortfolio.Models
+@model List<Testimonials>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+
+<br />
+<h2>Referanslar Sayfası</h2>
+<br />
+<a href="/Testimonial/AddTestimionial" class="btn btn-outline-dark">Yeni Referans Ekle</a>
+<br />
+<br />
+<table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <th>Görsel</th>
+        <th>İçerik</th>
+        <th>Ad Soyad</th>
+        <th>Ünvan</th>
+        <th>Durum</th>
+        <th>Tarih</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td><img src="@item.ImageURL" class="img-thumbnail" style="width:100px; height:100px; object-fit:cover" /></td>
+            <td>@item.Comment</td>
+            <td>@item.NameSurname</td>
+            <td>@item.Title</td>
+            <td>@item.Status</td>
+            <td>@item.Date</td>
+            <td><a href="/Testimonial/DeleteTestimionial/@item.TestimonialID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Testimonial/UpdateTestimionial/@item.TestimonialID" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+<br />
+
+

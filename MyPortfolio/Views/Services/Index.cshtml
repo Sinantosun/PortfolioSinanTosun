@@ -5,29 +5,35 @@
     int count = 0;
 }
 <br />
-<h2>Hizmetlerim Listesi</h2> <br />
+<h2>Hizmetlerim Listesi</h2>
+<br />
 
 <a href="/Services/AddService/" class="btn btn-outline-dark">Yeni Hizmet Ekle</a>
-<br /><br />
+<br />
+<br />
 <table class="table table-hover">
     <tr>
         <td>#</td>
         <td>İkon</td>
         <td>Başlık</td>
         <td>Açıklama</td>
+        <td>Durum</td>
         <td>Sil</td>
         <td>Güncelle</td>
+        <td>Durum</td>
     </tr>
     @foreach (var item in Model)
     {
         count++;
         <tr>
             <td>@count</td>
-            <td>@item.Icon</td>
+            <td><i class="@item.Icon"></i></td>
             <td>@item.Title</td>
             <td>@item.Description</td>
+            <td>@(item.Status==true?"Aktif":"Pasif")</td>
             <td><a href="/Services/DeleteService/@item.ServicesID" class="btn btn-outline-danger">Sil</a></td>
             <td><a href="/Services/UpdateService/@item.ServicesID" class="btn btn-outline-success">Güncelle</a></td>
+            <td><a href="/Services/MakeActiveService/@item.ServicesID" class="btn btn-outline-primary">@(item.Status == true ? "Aktif Yap" : "Pasif Yap")</a></td>
         </tr>
     }
 </table>

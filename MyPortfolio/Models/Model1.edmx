@@ -74,6 +74,7 @@
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Category" Type="int" />
           <Property Name="Github" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Services">
           <Key>
@@ -83,6 +84,7 @@
           <Property Name="Icon" Type="nvarchar" MaxLength="50" />
           <Property Name="Title" Type="nvarchar" MaxLength="50" />
           <Property Name="Description" Type="nvarchar" MaxLength="200" />
+          <Property Name="Status" Type="bit" />
         </EntityType>
         <EntityType Name="Skills">
           <Key>
@@ -119,10 +121,9 @@
           <Property Name="ImageURL" Type="nvarchar(max)" />
           <Property Name="NameSurname" Type="nvarchar" MaxLength="50" />
           <Property Name="Title" Type="nvarchar" MaxLength="50" />
-          <Property Name="Açıklama" Type="nvarchar" MaxLength="150" />
-          <Property Name="TwitterURL" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar" MaxLength="150" />
           <Property Name="InstagramURL" Type="nvarchar(max)" />
-          <Property Name="FacebookURL" Type="nvarchar(max)" />
+          <Property Name="GithubURL" Type="nvarchar(max)" />
           <Property Name="LinkedinURL" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Testimonials">
@@ -243,6 +244,7 @@
           <Property Name="Category" Type="Int32" />
           <Property Name="Github" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Categories" Relationship="Self.FK_Projects_Categories" FromRole="Projects" ToRole="Categories" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Services">
           <Key>
@@ -252,6 +254,7 @@
           <Property Name="Icon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Boolean" />
         </EntityType>
         <EntityType Name="Skills">
           <Key>
@@ -279,20 +282,6 @@
           <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="Teams">
-          <Key>
-            <PropertyRef Name="TeamID" />
-          </Key>
-          <Property Name="TeamID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ImageURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Açıklama" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Name="TwitterURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="InstagramURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="FacebookURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="LinkedinURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Testimonials">
           <Key>
@@ -330,13 +319,26 @@
           <EntitySet Name="Skills" EntityType="Self.Skills" />
           <EntitySet Name="SocialMedias" EntityType="Self.SocialMedias" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-          <EntitySet Name="Teams" EntityType="Self.Teams" />
           <EntitySet Name="Testimonials" EntityType="Self.Testimonials" />
           <AssociationSet Name="FK_Projects_Categories" Association="Self.FK_Projects_Categories">
             <End Role="Categories" EntitySet="Categories" />
             <End Role="Projects" EntitySet="Projects" />
           </AssociationSet>
+          <EntitySet Name="Teams" EntityType="MyPortfolioModel.Teams" />
         </EntityContainer>
+        <EntityType Name="Teams">
+          <Key>
+            <PropertyRef Name="TeamID" />
+          </Key>
+          <Property Name="TeamID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ImageURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="InstagramURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GithubURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkedinURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -412,6 +414,7 @@
           <EntitySetMapping Name="Projects">
             <EntityTypeMapping TypeName="MyPortfolioModel.Projects">
               <MappingFragment StoreEntitySet="Projects">
+                <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -423,6 +426,7 @@
           <EntitySetMapping Name="Services">
             <EntityTypeMapping TypeName="MyPortfolioModel.Services">
               <MappingFragment StoreEntitySet="Services">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="ServicesID" ColumnName="ServicesID" />
                 <ScalarProperty Name="Icon" ColumnName="Icon" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
@@ -460,21 +464,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Teams">
-            <EntityTypeMapping TypeName="MyPortfolioModel.Teams">
-              <MappingFragment StoreEntitySet="Teams">
-                <ScalarProperty Name="TeamID" ColumnName="TeamID" />
-                <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
-                <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Açıklama" ColumnName="Açıklama" />
-                <ScalarProperty Name="TwitterURL" ColumnName="TwitterURL" />
-                <ScalarProperty Name="InstagramURL" ColumnName="InstagramURL" />
-                <ScalarProperty Name="FacebookURL" ColumnName="FacebookURL" />
-                <ScalarProperty Name="LinkedinURL" ColumnName="LinkedinURL" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Testimonials">
             <EntityTypeMapping TypeName="MyPortfolioModel.Testimonials">
               <MappingFragment StoreEntitySet="Testimonials">
@@ -485,6 +474,20 @@
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teams">
+            <EntityTypeMapping TypeName="MyPortfolioModel.Teams">
+              <MappingFragment StoreEntitySet="Teams">
+                <ScalarProperty Name="LinkedinURL" ColumnName="LinkedinURL" />
+                <ScalarProperty Name="GithubURL" ColumnName="GithubURL" />
+                <ScalarProperty Name="InstagramURL" ColumnName="InstagramURL" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+                <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
+                <ScalarProperty Name="TeamID" ColumnName="TeamID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

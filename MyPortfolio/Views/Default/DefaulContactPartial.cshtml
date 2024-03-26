@@ -1,0 +1,43 @@
+﻿@model MyPortfolio.Models.Messages
+
+<div class="wow fadeInUp" id="contact" data-wow-delay="0.1s" style="background-color: #EF233C">
+    <div class="container-fluid">
+        <div class="container">
+            <br />
+                <div class="col-md-12">
+                    <h4 style="color:white">İletişim</h4>
+                    <div class="contact-form">
+                        <div id="success"></div>
+                        <form method="post" action="DefaulContactPartial">
+                            <div class="control-group">
+                                <input type="text" class="form-control" name="NameSurname" placeholder="Adınız Soyadınız" required="required" data-validation-required-message="Please enter your name" />
+                                <p class="help-block"></p>
+                                @Html.ValidationMessageFor(x=>x.NameSurname,"",new {@class="text-danger"})
+                            </div>
+                            <div class="control-group">
+                                <input type="email" class="form-control" name="Email" placeholder="Mail Adresiniz" required="required" data-validation-required-message="Please enter your email" />
+                                <p class="help-block"></p>
+                                @Html.ValidationMessageFor(x => x.Email, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" name="Subject" placeholder="Başlık" required="required" data-validation-required-message="Please enter a subject" />
+                                <p class="help-block"></p>
+                                @Html.ValidationMessageFor(x => x.Subject, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control" name="MessageContent" placeholder="Mesaj" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                <p class="help-block"></p>
+                                @Html.ValidationMessageFor(x => x.MessageContent, "", new { @class = "text-danger" })
+                            </div>
+                            <div>
+                                <button class="btn" style="background-color:white" type="submit" id="sendMessageButton">Gönder</button>
+                                <br />
+                                <br />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+ 
+        </div>
+    </div>
+</div>

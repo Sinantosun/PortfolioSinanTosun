@@ -18,10 +18,9 @@ namespace MyPortfolio.Models
         public string ImageURL { get; set; }
         public string NameSurname { get; set; }
         public string Title { get; set; }
-        public string Açıklama { get; set; }
-        public string TwitterURL { get; set; }
+        public string Description { get; set; }
         public string InstagramURL { get; set; }
-        public string FacebookURL { get; set; }
+        public string GithubURL { get; set; }
         public string LinkedinURL { get; set; }
     }
 }

@@ -1,0 +1,42 @@
+﻿@model List<MyPortfolio.Models.Experiences>
+@{
+    int count = 0;
+    string cssCard1 = "slideInRight";
+    string cssCard2 = "right";
+}
+
+<div class="experience" id="experience">
+    <div class="container">
+        <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+            <p>Deneyimlerim</p>
+            <h2>Tecrübelerim</h2>
+        </header>
+        @foreach (var item in Model)
+        {
+            count++;
+            if (count % 2 == 0)
+            {
+                cssCard1 = "slideInRight";
+                cssCard2 = "right";
+            }
+            else
+            {
+                cssCard2 = "left";
+                cssCard1 = "slideInLeft";
+            }
+            <div class="timeline">
+                <div class="timeline-item @cssCard2 wow @cssCard1" data-wow-delay="0.1s">
+                    <div class="timeline-text">
+                        <div class="timeline-date">@item.StartYear - @item.EndYear</div>
+                        <h2>@item.CompanyName</h2>
+                        <h4>@item.Title</h4>
+                        <p>
+                            @item.Location
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>

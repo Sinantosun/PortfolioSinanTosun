@@ -1,0 +1,30 @@
+﻿@using MyPortfolio.Models
+@model Testimonials
+@{
+    ViewBag.Title = "AddTestimionial";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Referans ekleme sayfası</h2>
+<br />
+<form method="post" enctype="multipart/form-data">
+    <label>Görsel</label>
+    <input type="file" name="ImageURL" class="form-control" />
+    @Html.ValidationMessageFor(x => x.ImageURL, "", new { @class = "text-danger" })
+    <br />
+    <label>Ad Soyad</label>
+    <input type="text" name="NameSurname" class="form-control" />
+    @Html.ValidationMessageFor(x => x.NameSurname, "", new { @class = "text-danger" })
+    <br />
+    <label>Unvan</label>
+    <input type="text" name="Title" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Title, "", new { @class = "text-danger" })
+    <br />
+    <label>İçerik</label>
+    <textarea class="form-control"  name="Comment" rows="10"></textarea>
+    @Html.ValidationMessageFor(x => x.Comment, "", new { @class = "text-danger" })
+    <br />
+    <input type="submit" class="btn btn-outline-success" value="Ekle" />
+</form>
+

@@ -109,6 +109,7 @@ namespace MyPortfolio.Controllers
                 }
                 value.Name = projects.Name;
                 value.Category = projects.Category;
+                value.Description = projects.Description;
                 context.SaveChanges();
 
                 return RedirectToAction("Index");

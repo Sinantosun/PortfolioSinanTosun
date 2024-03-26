@@ -142,6 +142,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\ErrorPagesController.cs" />
     <Compile Include="Controllers\ExperiencesController.cs" />
     <Compile Include="Controllers\FeatureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -149,6 +150,9 @@
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Controllers\SkillsController.cs" />
+    <Compile Include="Controllers\SocialMediaController.cs" />
+    <Compile Include="Controllers\TeamsController.cs" />
+    <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -212,11 +216,13 @@
     <Compile Include="ValidationRules\ContactValidators\ContactValidator.cs" />
     <Compile Include="ValidationRules\ExperiencesValidators\ExperiencesValidator.cs" />
     <Compile Include="ValidationRules\FeatureValidators\FeatureValidator.cs" />
+    <Compile Include="ValidationRules\MessagesValidators\MessageValidator.cs" />
     <Compile Include="ValidationRules\ProjectValidators\ProjectValidator.cs" />
     <Compile Include="ValidationRules\ServicesValidatiors\ServicesValidator.cs" />
     <Compile Include="ValidationRules\SkillsValidators\SkillValidator.cs" />
     <Compile Include="ValidationRules\SocialMediasValidatiors\SocialMediasValidator.cs" />
     <Compile Include="ValidationRules\TeamsValidatiors\TeamsValidator.cs" />
+    <Compile Include="ValidationRules\TestimonialValidators\TestimonialValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -249,6 +255,7 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="Templates\devfolio2-main\css\style.css" />
+    <Content Include="Templates\devfolio2-main\css\style2.css" />
     <Content Include="Templates\devfolio2-main\developer-portfolio-template.jpg" />
     <Content Include="Templates\devfolio2-main\img\about.jpg" />
     <Content Include="Templates\devfolio2-main\img\AboutMe.png" />
@@ -274,6 +281,7 @@
     <Content Include="Templates\devfolio2-main\img\vesikalik.png" />
     <Content Include="Templates\devfolio2-main\index.html" />
     <Content Include="Templates\devfolio2-main\js\main.js" />
+    <Content Include="Templates\devfolio2-main\js\main2.js" />
     <Content Include="Templates\devfolio2-main\lib\animate\animate.css" />
     <Content Include="Templates\devfolio2-main\lib\animate\animate.min.css" />
     <Content Include="Templates\devfolio2-main\lib\easing\easing.js" />
@@ -403,12 +411,34 @@
     <Content Include="Views\Skills\Index.cshtml" />
     <Content Include="Views\Skills\AddSkill.cshtml" />
     <Content Include="Views\Skills\UpdateSkill.cshtml" />
+    <Content Include="Views\SocialMedia\Index.cshtml" />
+    <Content Include="Views\SocialMedia\AddSocialMedia.cshtml" />
+    <Content Include="Views\SocialMedia\UpdateSocialMedia.cshtml" />
+    <Content Include="Views\Teams\Index.cshtml" />
+    <Content Include="Views\Teams\AddTeams.cshtml" />
+    <Content Include="Views\Teams\UpdateTeams.cshtml" />
+    <Content Include="Views\ErrorPages\Page404.cshtml" />
+    <Content Include="Views\ErrorPages\Page401.cshtml" />
+    <Content Include="Views\Testimonial\Index.cshtml" />
+    <Content Include="Views\Testimonial\AddTestimionial.cshtml" />
+    <Content Include="Views\Testimonial\UpdateTestimionial.cshtml" />
+    <Content Include="Views\Default\DefaultSkillsPartial.cshtml" />
+    <Content Include="Views\Default\DefaultServicesPartial.cshtml" />
+    <Content Include="Views\Default\DefaultExperincePartial.cshtml" />
+    <Content Include="Views\Default\DefaulProjectPartial.cshtml" />
+    <Content Include="Views\Default\DefaulTestimonailPartial.cshtml" />
+    <Content Include="Views\Default\DefaulTeamPartial.cshtml" />
+    <Content Include="Views\Default\DefaulContactPartial.cshtml" />
+    <Content Include="Views\Default\ProductDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\About\" />
     <Folder Include="Images\Feature\" />
     <Folder Include="Images\Projects\" />
+    <Folder Include="Images\Teams\" />
+    <Folder Include="Images\Testimonials\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

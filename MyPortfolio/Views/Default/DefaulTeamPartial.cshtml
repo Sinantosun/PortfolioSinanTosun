@@ -1,0 +1,33 @@
+﻿@model List<MyPortfolio.Models.Teams>
+<div class="team" id="team">
+    <div class="container">
+        <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+            <p></p>
+            <h2>Ekip Arkadaşlarım</h2>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="@item.ImageURL" style="object-fit:cover; width:150px; height:150px; border-radius:50%" alt="Image">
+                        </div>
+                        <div class="team-text">
+                            <h2>@item.NameSurname</h2>
+                            <h4>@item.Title</h4>
+                            <p>
+                                @item.Description
+                            </p>
+                            <div class="team-social">
+                                <a class="btn" href="@item.GithubURL"><i class="fab fa-github"></i></a>
+                                <a class="btn" href="@item.LinkedinURL"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn" href="@item.InstagramURL"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

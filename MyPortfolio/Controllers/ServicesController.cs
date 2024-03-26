@@ -96,5 +96,21 @@ namespace MyPortfolio.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+
+        public ActionResult MakeActiveService(int id)
+        {
+            var value = context.Services.Find(id);
+            if (value.Status==true)
+            {
+                value.Status = false;
+            }
+            else
+            {
+                value.Status = true;
+            }
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

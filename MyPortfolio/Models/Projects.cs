@@ -11,7 +11,8 @@ namespace MyPortfolio.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Web.Mvc;
+
     public partial class Projects
     {
         public int ProjectID { get; set; }
@@ -19,6 +20,8 @@ namespace MyPortfolio.Models
         public string Name { get; set; }
         public Nullable<int> Category { get; set; }
         public string Github { get; set; }
+        [AllowHtml]
+        public string Description { get; set; }
     
         public virtual Categories Categories { get; set; }
     }

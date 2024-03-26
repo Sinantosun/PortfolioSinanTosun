@@ -1,0 +1,29 @@
+﻿@model MyPortfolio.Models.SocialMedias
+@{
+    ViewBag.Title = "AddSocialMedia";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Sosyal Medya Ekleme Sayfası</h2>
+<br />
+
+<form method="post">
+    @Html.Label("İkon")
+    <input type="text" name="Icon" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Icon, "", new { @class = "text-danger" })
+    <br />
+    @Html.Label("Başlık")
+    <input type="text" name="URL" class="form-control" />
+    @Html.ValidationMessageFor(x => x.URL, "", new { @class = "text-danger" })
+    <br />
+    @Html.Label("Açıklama")
+    <input type="text" name="Name" class="form-control" />
+    @Html.ValidationMessageFor(x => x.Name, "", new { @class = "text-danger" })
+    <br />
+    <input type="submit" class="btn btn-outline-success" />
+</form>
+
+
+
+

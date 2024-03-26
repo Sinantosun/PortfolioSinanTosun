@@ -1,0 +1,39 @@
+﻿@model List<MyPortfolio.Models.Projects>
+
+<div class="portfolio" id="portfolio">
+    <div class="container">
+        <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+            <p>Projelerim</p>
+            <h2>Son Projelerim</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul id="portfolio-filter">
+                    <li data-filter="*" class="filter-active">Tümü</li>
+                    @foreach (var item in ViewBag.Categories as List<MyPortfolio.Models.Categories>)
+                    {
+                        <li data-filter=".@item.CategoryID">@item.Name</li>
+                    }
+
+                </ul>
+            </div>
+        </div>
+        <div class="row portfolio-container">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item @item.Categories.CategoryID wow fadeInUp" data-wow-delay="0.0s">
+                    <div class="portfolio-wrap">
+                        <div class="portfolio-img">
+                            <img src="@item.Image" alt="Image">
+                        </div>
+                        <div class="portfolio-text">
+                            <h3>@item.Name</h3>
+                            <a  href="/Default/ProductDetails/@item.ProjectID">Detay</a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
