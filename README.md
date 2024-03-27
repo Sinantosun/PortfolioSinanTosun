@@ -1,4 +1,4 @@
-![photo8](https://github.com/Sinantosun/PortfolioSinanTosun/assets/145317724/d5eca3a1-016b-466f-8490-f0082a3a99f2)Merhabalar ! 
+Merhabalar ! 
 
 M&Y Yazılım Eğitim Akademi Danışmanlık bünyesinde Erhan Gündüz hocamızın eğitmenliği Murat Yücedağ hocamızın mentörlüğünü üstlendiği ilk projem olan Mvc ile Porfolio sitesi geliştirme' aşamasını tamamladım.
 
