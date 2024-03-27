@@ -17,6 +17,15 @@ SQL Tablolar Ve İlişikler
 Burada Proje ve kategori tabloları arasına ilişki görüyoruz bu ilişki nedeni ilgili projenin hangi kategoriye ait olduğunu daha kolay anlamak amacıyla yapılmıştır.
 
 
+Projede Bulunan 404 Not Found Page sayfası sayesinde proje bütünü içinde bir kaynak/url bulunmadığında aşağıdaki gibi bir ekran bizi karşılamaktadır.
+![photo10](https://github.com/Sinantosun/PortfolioSinanTosun/assets/145317724/68715819-1f23-4e84-94ca-d4c02febd487)
+
+
+Proje bazında bir authorize işlemi bulunmaktada bu işlem sadece admin tarafı için geçerlidir eğer rol admin değilse 401 Unautohrize ile aşağıdaki sayfa tasarımı bizi karşılamaktadır
+
+![photo11](https://github.com/Sinantosun/PortfolioSinanTosun/assets/145317724/cb96efc1-b460-4d63-affe-263fe3bf9596)
+
+
 Yetenklerim Alanı 
 
 ![photo1](https://github.com/Sinantosun/PortfolioSinanTosun/assets/145317724/dfe5ed44-1046-46b1-88a7-106065986009)
