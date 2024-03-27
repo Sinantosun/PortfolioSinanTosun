@@ -10,6 +10,13 @@ Proje içi bazı görseller aşağıda yer almaktadır.
 
 Herkese İyi Çalışmalar :)
 
+SQL Tablolar Ve İlişikler
+
+![photo9](https://github.com/Sinantosun/PortfolioSinanTosun/assets/145317724/3d4ebc60-eb68-42b4-8424-439ce6fddd84)
+
+Burada Proje ve kategori tabloları arasına ilişki görüyoruz bu ilişki nedeni ilgili projenin hangi kategoriye ait olduğunu daha kolay anlamak amacıyla yapılmıştır.
+
+
 Yetenklerim Alanı 
 
 ![photo1](https://github.com/Sinantosun/PortfolioSinanTosun/assets/145317724/dfe5ed44-1046-46b1-88a7-106065986009)
