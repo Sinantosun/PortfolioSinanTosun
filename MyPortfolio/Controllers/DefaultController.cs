@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace MyPortfolio.Controllers
 {
+
     public class DefaultController : Controller
     {
         MyPortfolioEntities context = new MyPortfolioEntities();

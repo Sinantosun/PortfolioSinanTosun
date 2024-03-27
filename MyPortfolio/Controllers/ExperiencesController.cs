@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace MyPortfolio.Controllers
 {
+    [Authorize]
     public class ExperiencesController : Controller
     {
         MyPortfolioEntities context = new MyPortfolioEntities();

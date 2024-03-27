@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace MyPortfolio.Controllers
 {
-
+    [Authorize]
     public class TeamsController : Controller
     {
         MyPortfolioEntities context = new MyPortfolioEntities();

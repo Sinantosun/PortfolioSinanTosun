@@ -1,0 +1,22 @@
+﻿@model MyPortfolio.Models.Admins
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni Admin Tanımalama Sayfası</h2>
+
+<br />
+
+<form method="post">
+    @Html.Label("Kullanıcı Adı")
+    <input type="text" name="UserName" class="form-control" />
+    <br />
+    @Html.Label("Şifre")
+    <input type="text" name="Password" class="form-control" />
+    <br />
+    <input type="submit" value="Kaydet" class="btn btn-outline-success" />
+</form>
+
+

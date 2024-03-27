@@ -12,15 +12,12 @@ namespace MyPortfolio.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Projects
+    public partial class Admins
     {
-        public int ProjectID { get; set; }
-        public string Image { get; set; }
-        public string Name { get; set; }
-        public Nullable<int> Category { get; set; }
-        public string Github { get; set; }
-        public string Description { get; set; }
-    
-        public virtual Categories Categories { get; set; }
+        public int AdminID { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public string PasswordSalt { get; set; }
+        public string Role { get; set; }
     }
 }

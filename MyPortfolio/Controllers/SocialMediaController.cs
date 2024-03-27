@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace MyPortfolio.Controllers
 {
+    [Authorize]
     public class SocialMediaController : Controller
     {
         MyPortfolioEntities context = new MyPortfolioEntities();

@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace MyPortfolio.Controllers
 {
+    [Authorize]
     public class MessagesController : Controller
     {
         MyPortfolioEntities MyPortfolioEntities = new MyPortfolioEntities();

@@ -11,6 +11,7 @@ using System.Web.Mvc;
 
 namespace MyPortfolio.Controllers
 {
+    [Authorize]
     public class AboutController : Controller
     {
         MyPortfolioEntities context = new MyPortfolioEntities();

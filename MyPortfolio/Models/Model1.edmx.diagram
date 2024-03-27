@@ -19,6 +19,7 @@
         <EntityTypeShape EntityType="MyPortfolioModel.Testimonials" Width="1.5" PointX="9.375" PointY="6.25" IsExpanded="true" />
         <AssociationConnector Association="MyPortfolioModel.FK_Projects_Categories" ManuallyRouted="false" />
         <EntityTypeShape EntityType="MyPortfolioModel.Teams" Width="1.5" PointX="14" PointY="3" />
+        <EntityTypeShape EntityType="MyPortfolioModel.Admins" Width="1.5" PointX="0.75" PointY="8.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
