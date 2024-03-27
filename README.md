@@ -11,13 +11,9 @@ Proje içi bazı görseller ve kısa tanıtım aşağıda yer almaktadır.
 Herkese İyi Çalışmalar :)
 
 Admin Tarafın Proje ekleme sayfasında text areayı SummerNote kullanarak gerçekleştirdim.
-
 SummerNote nedir ?
-
 SummerNote :Kodlama açısından yazılımcıya kolaylık sağlayan ve tamamen ücretsiz bootstrap destekli bir yazı editörüdür.
-
 SummerNote Ne İşe Yarar ?
-
 SummerNote : textareayı modern bir görünüme kavuşturur. yanlızca bununla da kalmaz yazıları html formatlarda yazmamıza kolaylıkla video eklememize link vermemize ve çok daha fazlasını yapabilmektedir.
 
 summerNote ile yazıları ön yüz kısmından kalın yazabilir, altını cizebilir arka plan rengi ayarlıyabiliriz.
