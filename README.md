@@ -19,8 +19,10 @@ SummerNote :Kodlama açısından yazılımcıya kolaylık sağlayan ve tamamen �
 SummerNote Ne İşe Yarar ?
 
 SummerNote : textareayı modern bir görünüme kavuşturur. yanlızca bununla da kalmaz yazıları html formatlarda yazmamıza kolaylıkla video eklememize link vermemize ve çok daha fazlasını yapabilmektedir.
+
 summerNote ile yazıları ön yüz kısmından kalın yazabilir, altını cizebilir arka plan rengi ayarlıyabiliriz.
 Pek tabi SummerNote ile veri tabanına kayıt yapılırken html kodları çalıştırabilceğinden mvc üzerinde istenilen alanda @Html.Raw("içerik") bu bloğun eklenmesi gereklidir. Bu blog eklenmediğinde MVC bu tagleri Encode eder ve bunları algılamaz. 
+
 DipNot: @Html.Raw("içerik") bloğunu kullanırken dikkat etmek gereklidir. Çünkü gelen bütün verileri encode etmeden yazdırır bu site içi kullanıma göre XSS açığına veya daha farklı bir hataya/açığa sebebiyet verebilir.
 
 Summer Note ile ilgili daha fazla bilgi için : https://summernote.org/examples/
