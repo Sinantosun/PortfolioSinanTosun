@@ -6,7 +6,7 @@ Bu Porftöyde yapmış olduğum projelerin yer aldığı ekip arkdaşlarımın b
 
 Projede Mvc Yaklaşımını kullandık, ayrıca entityler fluent validasyon ile kontrol edilip ilgili değerler neticesinde işlem yapılıyor.
 
-Proje içi bazı görseller aşağıda yer almaktadır.
+Proje içi bazı görseller ve kısa tanıtım aşağıda yer almaktadır.
 
 Herkese İyi Çalışmalar :)
 
