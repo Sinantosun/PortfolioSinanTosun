@@ -2,9 +2,9 @@ Merhabalar !
 
 M&Y Yazılım Eğitim Akademi Danışmanlık bünyesinde Erhan Gündüz hocamızın eğitmenliği Murat Yücedağ hocamızın mentörlüğünü üstlendiği ilk projem olan Mvc ile Porfolio sitesi geliştirme' aşamasını tamamladım.
 
-Bu Porftöyde yapmış olduğum projelerin yer aldığı ekip arkdaşlarımın bulunduğu hizmetler, yeteneklerim  ve hakkımda bilgileri admin panelli tarafından yönetilerek gerçekleşitirilcek bir sistem geliştirdik.
+Bu Porftöyde yapmış olduğum projelerin yer aldığı ekip arkdaşlarımın bulunduğu hizmetlerim, yeteneklerim  ve hakkımda bilgilerinin admin paneli aracılığıyla yönetilerek gerçekleştirilen bir sistem geliştirdik.
 
-Projede Mvc Yaklaşımını kullandık, ayrica entityler fluent validasyon ile kontrol edilip ilgili değerler neticesinde işlem yapılıyor.
+Projede Mvc Yaklaşımını kullandık, ayrıca entityler fluent validasyon ile kontrol edilip ilgili değerler neticesinde işlem yapılıyor.
 
 Proje içi bazı görseller aşağıda yer almaktadır.
 
